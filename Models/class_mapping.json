@@ -1,0 +1,20 @@
+{
+  "class_to_index": {
+    "BCC": 0,
+    "BKL": 1,
+    "MEL": 2,
+    "NV": 3
+  },
+  "index_to_class": {
+    "0": "BCC",
+    "1": "BKL",
+    "2": "MEL",
+    "3": "NV"
+  },
+  "full_names": {
+    "BCC": "Basal Cell Carcinoma",
+    "BKL": "Benign Keratosis",
+    "MEL": "Melanoma",
+    "NV": "Melanocytic Nevi"
+  }
+}

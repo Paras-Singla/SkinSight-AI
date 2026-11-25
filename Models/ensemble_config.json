@@ -1,0 +1,63 @@
+{
+  "ensemble_name": "Ensemble_Top3_Weighted",
+  "num_classes": 4,
+  "class_mapping_path": "Models/class_mapping.json",
+  "classes": [
+    "BCC",
+    "BKL",
+    "MEL",
+    "NV"
+  ],
+  "fallback_priority": [
+    "ConvNeXtTiny",
+    "EfficientNetV2B0",
+    "MobileNetV3Large"
+  ],
+  "members": [
+    {
+      "architecture": "ConvNeXtTiny",
+      "weight": 0.45,
+      "image_size": 384,
+      "preprocessing": "RGB, bilinear resize to 384x384, float32 [0, 255] with built-in ConvNeXtTiny normalization layer",
+      "candidate_paths": [
+        "Models/ConvNeXtTiny/L1_ConvNeXtTiny_384_ClassWeight.keras",
+        "Advanced_Experiments/Models/ConvNeXtTiny/L1_ConvNeXtTiny_384_ClassWeight.keras"
+      ],
+      "target_path": "Models/ConvNeXtTiny/L1_ConvNeXtTiny_384_ClassWeight.keras",
+      "env_url_var": "SKINSIGHT_CONVNEXT_URL",
+      "secret_key": "convnext_url",
+      "download_url": "https://github.com/Paras-Singla/SkinSight-AI/releases/download/v1.0.0/L1_ConvNeXtTiny_384_ClassWeight.keras",
+      "sha256": "CAC6B7D319CB1F6C935F3722A9CB5B563F7F4086AC84B33448A2FB3273A16358"
+    },
+    {
+      "architecture": "EfficientNetV2B0",
+      "weight": 0.15,
+      "image_size": 384,
+      "preprocessing": "RGB, bilinear resize to 384x384, float32 [0, 255] with built-in EfficientNetV2B0 rescaling/normalization layers",
+      "candidate_paths": [
+        "Models/EfficientNetV2B0/best_model.keras",
+        "Models/best_model.keras"
+      ],
+      "target_path": "Models/best_model.keras",
+      "env_url_var": "SKINSIGHT_EFFNET_URL",
+      "secret_key": "effnet_url",
+      "download_url": "https://github.com/Paras-Singla/SkinSight-AI/releases/download/v1.0.0/best_model.keras",
+      "sha256": "E6B0FE72B6AB25CDA07CCEC180C4A8E1C3F8798BE2F500997777AFB4BA53DEC5"
+    },
+    {
+      "architecture": "MobileNetV3Large",
+      "weight": 0.40,
+      "image_size": 384,
+      "preprocessing": "RGB, bilinear resize to 384x384, float32 [0, 255] with built-in MobileNetV3Large rescaling layer",
+      "candidate_paths": [
+        "Models/MobileNetV3Large/J_MobileNetV3Large_384.keras",
+        "Advanced_Experiments/Models/MobileNetV3Large/J_MobileNetV3Large_384.keras"
+      ],
+      "target_path": "Models/MobileNetV3Large/J_MobileNetV3Large_384.keras",
+      "env_url_var": "SKINSIGHT_MOBILENET_URL",
+      "secret_key": "mobilenet_url",
+      "download_url": "https://github.com/Paras-Singla/SkinSight-AI/releases/download/v1.0.0/J_MobileNetV3Large_384.keras",
+      "sha256": "D7BE447C091EB1D35D294D540C76581EA262D437F4325CBCD463E6E7D449FDF6"
+    }
+  ]
+}

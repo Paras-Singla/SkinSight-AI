@@ -1,0 +1,46 @@
+# Datasets (never commit ISIC images or split caches to GitHub)
+Dataset/
+*.jpg
+*.jpeg
+*.png
+!assets/logo.png
+
+# Training outputs, metrics, logs, and experiment archives
+Results/
+Advanced_Experiments/
+Models/checkpoints/
+Models/model_config.json
+*.npy
+*.csv
+*.log
+
+# Large model checkpoints (>100 MB exceeds GitHub file size limit; see README for Hugging Face / Git LFS setup)
+*.keras
+*.h5
+*.hdf5
+*.pb
+*.onnx
+
+# Python cache & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+tf_venv/
+
+# Secrets, credentials & environment files
+.env
+.env.*
+.streamlit/secrets.toml
+*.pem
+*.key
+kaggle.json
+
+# OS & editor artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
